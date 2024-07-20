@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Tube2Tune{% endblock %}
+
+{% block meta_description %}Convert your favorite YouTube videos to MP3 with Tube2Tune. Fast, free, and easy to use!{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Tube2Tune</h1>
+    <p>Convert your favorite YouTube videos to MP3 with Tube2Tune. Fast, free, and easy to use!.</p>
+    <form method="post">
+        <div class="form-group">
+            <label for="youtube_url">Enter YouTube URL:</label>
+            <input type="text" id="youtube_url" name="youtube_url" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Download MP3</button>
+    </form>
+    <div id="loading">Processing your request...</div>
+    <div id="download-ready">Download Ready!</div>
+    <div class="alert">{{ message }}</div>
+{% endblock %}
